@@ -1,8 +1,18 @@
 package hellotvxlet;
 
 import java.util.Random;
+import javax.microedition.xlet.XletContext;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import javax.tv.xlet.*;
+import org.havi.ui.HScene;
+import org.havi.ui.HSceneFactory;
+import org.havi.ui.HStaticText;
+import org.havi.ui.HTextButton;
+import org.havi.ui.HVisible;
+import org.havi.ui.event.HActionListener;
 
-public class Hangman // Constructor
+public class hellotvxlet implements Xlet // Constructor
 {
     Random r;
     GetData get; // Class to get user input
@@ -14,7 +24,7 @@ public class Hangman // Constructor
     String entryWord =" "; // User's guesses
     private boolean Goodguess;
     
-    public Hangman()
+    public hellotvxlet()
     {
         r = new Random(); // Makes Random object
         get = new GetData(); // Makes GetData object
@@ -198,5 +208,21 @@ public class Hangman // Constructor
         System.out.println("|   o");
         System.out.println("|  /|\\");
         System.out.println("|  / \\");
+    }
+    
+    public void startXlet() {
+    
+    }
+
+    public void pauseXlet() {
+     
+    }
+
+    public void destroyXlet(boolean unconditional) {
+     
+    }
+
+    public void initXlet(XletContext ctx) throws XletStateChangeException {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
